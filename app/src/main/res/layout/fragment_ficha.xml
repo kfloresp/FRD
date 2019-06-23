@@ -5,81 +5,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ficha" >
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="10">
+            android:padding="10dp">
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Número de sujeto/paciente" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/etnsujeto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nombres y Apellidos" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/etnombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Número de historia clinica" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/ethistoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fecha" />
-
-            <EditText
-                android:id="@+id/editText4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Edad" />
-
-            <EditText
-                android:id="@+id/editText5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,17 +62,17 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Talla" />
+                        android:text="Fecha" />
 
                     <EditText
-                        android:id="@+id/editText7"
+                        android:id="@+id/etfecha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:enabled="false"
+                        android:inputType="date" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -111,54 +81,109 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edad" />
+
+                    <EditText
+                        android:id="@+id/etedad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Talla" />
+
+                    <EditText
+                        android:id="@+id/ettalla"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Peso" />
 
                     <EditText
-                        android:id="@+id/editText6"
+                        android:id="@+id/etpeso"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IMC" />
+
+                <EditText
+                    android:id="@+id/etimc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="numberSigned" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Resultado" />
+
+                <EditText
+                    android:id="@+id/etresultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
             <TextView
-                android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="IMC" />
-
-            <EditText
-                android:id="@+id/editText8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Resultado" />
-
-            <EditText
-                android:id="@+id/editText9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Diagnostico HRP" />
+                android:text="Diagnostico HBP" />
 
             <Switch
-                android:id="@+id/switch1"
+                android:id="@+id/swdiagnostico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SI" />
