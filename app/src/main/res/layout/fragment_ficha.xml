@@ -70,8 +70,8 @@
                         android:id="@+id/etfecha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:enabled="false"
+                        android:ems="9"
+                        android:enabled="true"
                         android:inputType="date" />
                 </LinearLayout>
 
@@ -89,7 +89,7 @@
                         android:id="@+id/etedad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:ems="9"
                         android:inputType="number" />
                 </LinearLayout>
             </LinearLayout>
@@ -107,13 +107,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Talla" />
+                        android:text="Talla (Metros)" />
 
                     <EditText
                         android:id="@+id/ettalla"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:ems="9"
                         android:inputType="numberDecimal" />
                 </LinearLayout>
 
@@ -125,13 +125,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Peso" />
+                        android:text="Peso (Kilos)" />
 
                     <EditText
                         android:id="@+id/etpeso"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:ems="9"
                         android:inputType="numberDecimal" />
                 </LinearLayout>
             </LinearLayout>

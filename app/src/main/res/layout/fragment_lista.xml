@@ -5,9 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".lista">
 
-    <Spinner
-        android:id="@+id/spinner"
+    <ListView
+        android:id="@+id/lista_ficha"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_height="match_parent" />
 </LinearLayout>
