@@ -1,31 +1,37 @@
 package com.teamallqu.frd;
 
 public class c_ficha {
-    String numsujeto;
-    String nombreape;
+    int numsujeto;
     String numhistoria;
-    String fecha;
     String edad;
-    double talla;
-    double peso;
-    double imc;
-    String resultado;
+    String talla;
+    String peso;
+    String imc;
+    String estado;
     String diagnostico;
+    String fecha;
 
-    public String getNumsujeto() {
+    public int getNumsujeto() {
         return numsujeto;
     }
 
-    public void setNumsujeto(String numsujeto) {
+    public void setNumsujeto(int numsujeto) {
         this.numsujeto = numsujeto;
     }
 
-    public String getNombreape() {
-        return nombreape;
+    public c_ficha(int numsujeto, String numhistoria, String edad, String talla, String peso, String imc, String estado, String diagnostico, String fecha) {
+        this.numsujeto = numsujeto;
+        this.numhistoria = numhistoria;
+        this.edad = edad;
+        this.talla = talla;
+        this.peso = peso;
+        this.imc = imc;
+        this.estado = estado;
+        this.diagnostico = diagnostico;
+        this.fecha = fecha;
     }
 
-    public void setNombreape(String nombreape) {
-        this.nombreape = nombreape;
+    public c_ficha() {
     }
 
     public String getNumhistoria() {
@@ -36,14 +42,6 @@ public class c_ficha {
         this.numhistoria = numhistoria;
     }
 
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
     public String getEdad() {
         return edad;
     }
@@ -52,36 +50,36 @@ public class c_ficha {
         this.edad = edad;
     }
 
-    public double getTalla() {
+    public String getTalla() {
         return talla;
     }
 
-    public void setTalla(double talla) {
+    public void setTalla(String talla) {
         this.talla = talla;
     }
 
-    public double getPeso() {
+    public String getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(String peso) {
         this.peso = peso;
     }
 
-    public double getImc() {
+    public String getImc() {
         return imc;
     }
 
-    public void setImc(double imc) {
+    public void setImc(String imc) {
         this.imc = imc;
     }
 
-    public String getResultado() {
-        return resultado;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setResultado(String resultado) {
-        this.resultado = resultado;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getDiagnostico() {
@@ -92,19 +90,22 @@ public class c_ficha {
         this.diagnostico = diagnostico;
     }
 
-    public c_ficha(String numsujeto, String nombreape, String numhistoria, String fecha, String edad, double talla, double peso, double imc, String resultado, String diagnostico) {
-        this.numsujeto = numsujeto;
-        this.nombreape = nombreape;
-        this.numhistoria = numhistoria;
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
         this.fecha = fecha;
+    }
+
+    public c_ficha(String numhistoria, String edad, String talla, String peso, String imc, String estado, String diagnostico, String fecha) {
+        this.numhistoria = numhistoria;
         this.edad = edad;
         this.talla = talla;
         this.peso = peso;
         this.imc = imc;
-        this.resultado = resultado;
+        this.estado = estado;
         this.diagnostico = diagnostico;
-    }
-
-    public c_ficha() {
+        this.fecha = fecha;
     }
 }

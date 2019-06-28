@@ -38,10 +38,10 @@ public class ad_lista extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         inflater = (LayoutInflater)activity.getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemview = inflater.inflate(R.layout.item_lista,null);
-        TextView txup = itemview.findViewById(R.id.item_historia);
-        TextView txtexto = itemview.findViewById(R.id.item_nombres);
+        TextView txup = itemview.findViewById(R.id.item_titulo);
+        TextView txtexto = itemview.findViewById(R.id.item_centro);
         txup.setText(listdata.get(i).getNumhistoria());
-        txtexto.setText(listdata.get(i).getNombreape());
+        txtexto.setText(listdata.get(i).getEdad()+ "años / HBP "+listdata.get(i).getDiagnostico()+" / "+listdata.get(i).getEstado());
         return itemview;
     }
 }

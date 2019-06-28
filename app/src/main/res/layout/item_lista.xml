@@ -6,16 +6,16 @@
     android:padding="5dp">
 
     <TextView
-        android:id="@+id/item_historia"
+        android:id="@+id/item_titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/item_nombres"
+        android:id="@+id/item_centro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 </LinearLayout>

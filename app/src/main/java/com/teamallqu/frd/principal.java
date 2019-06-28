@@ -1,16 +1,34 @@
 package com.teamallqu.frd;
 
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class principal extends AppCompatActivity implements ficha.Guardar_ficha{
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class principal extends AppCompatActivity{
     Toolbar toolbar;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -19,17 +37,11 @@ Fragment selectfragment = null;
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    getSupportActionBar().setTitle("Ficha nueva");
                     selectfragment = new ficha();
-                    save.setVisible(true);
-                    export.setVisible(false);
-                    
+
                     break;
                 case R.id.navigation_dashboard:
-                    getSupportActionBar().setTitle("Lista de pacientes");
                     selectfragment = new lista();
-                    export.setVisible(true);
-                    save.setVisible(false);
 
                     break;
 
@@ -48,50 +60,7 @@ Fragment selectfragment = null;
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer,new ficha()).commit();
-        initoolbar();
-
 
     }
 
-    /*INICIAR TOOLBAR*/
-    private void initoolbar() {
-        toolbar = findViewById(R.id.tool);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Ficha nueva");
     }
-
-    MenuItem save;
-    MenuItem export;
-    /*ASIGNAR NAVIGATION A TOOLBAR*/
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.save,menu);
-        save = menu.findItem(R.id.isavemenu);
-        export = menu.findItem(R.id.iexportmenu);
-        export.setVisible(false);
-        return true;
-    }
-    /*ASIGNAR FUNCIONES A BOTONES TOOLBAR*/
-    public boolean onOptionsItemSelected(MenuItem menui){
-        switch (menui.getItemId()){
-            case R.id.isavemenu:
-                guardarficha();
-                ;break;
-            case R.id.iexportmenu:
-                exportarlista();
-                ;break;
-        }
-        return true;
-    }
-
-    private void exportarlista() {
-    }
-
-    private void guardarficha() {
-        guardar();
-    }
-
-    @Override
-    public void guardar() {
-        Toast.makeText(this, "guardar", Toast.LENGTH_SHORT).show();
-    }
-}

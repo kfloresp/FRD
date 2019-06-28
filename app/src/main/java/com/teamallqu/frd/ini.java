@@ -18,6 +18,6 @@ public class ini extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },1);
+        },3000);
     }
 }
